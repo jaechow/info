@@ -119,35 +119,43 @@ $ sudo apt-get install php5 apache2 libapache2-mod-php5 php5-curl libapache2-mod
 ```
 
 - Setup MySQL
+- 
 ```shell
 $ mysql_secure_installation
 $ mysql -u root -p
 ```
+
 - Enable Apache2 rewrite module
 ```shell
 $ a2enmod rewrite
 ```
+
 - Enable headers rewrite module
 ```shell
 $ a2enmod headers
 ```
+
 - Enable mcrypt
 ```shell
 $ sudo php5enmod mcrypt
 ```
+
 - Restart Apache
 ```shell
 $ sudo service apache2 restart
 ```
+
 - Install Remote Sublime Text Binary
 ```shell
 $ sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate
 $ sudo chmod a+x /usr/local/bin/rmate
 ```
+
 - Edit `mysql` config
 ```shell
 $ rmate /etc/mysql/my.cnf
 ```
+
 - Enable `mysqli`
 ```shell
 $ rmate /etc/php/7.0/apache2/php.ini
@@ -163,18 +171,22 @@ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 ```shell
 $ rmate /etc/apache2/apache2.conf
 ```
+
 - **View Apache Error Log**
 ```shell
 $ rmate /var/log/apache2/error.log
 ```
+
 - Update `cURL`
 ```shell
 $ ! /usr/bin/env bash
 ```
+
 - Install any build-dependencies necessary for `cURL`
 ```shell
 $ sudo apt-get build-dep curl
 ```
+
 - Get latest `libcurl` (as of: **Feb 25, 2016**)
 ```shell
 $ mkdir ~/curl
@@ -189,6 +201,7 @@ $ ./configure
 $ ./make
 $ sudo make install
 ```
+
 - Update `SSL` (Avoid **Heart Bleed**)
 ```shell
 $ sudo apt-get install make (Install compiling library Make)
@@ -212,6 +225,7 @@ $ openssl version -v
   </IfModule>
 </FilesMatch>
 ```
+
 - **SSL Certificates** with _Let's Encrypt_
     + First, add the repository:
     ```shell
@@ -233,15 +247,18 @@ $ rm -rf /etc/letsencrypt/archive/domain.com/
 $ rm -rf /etc/letsencrypt/live/domain.com/
 $ rm -rf /etc/letsencrypt/renewal/domain.com.conf
 ```
+
 - Edit SSL Certificate configuration
 ```shell
 $ rmate /etc/apache2/sites-available/000-default-le-ssl.conf
 ```
+
 - Set up Auto-Renewal
 To run the renewal check daily, we will use `cron`, a standard system service for running periodic jobs. We tell `cron` what to do by opening and editing a file called a `crontab`
 ```shell
 $ sudo crontab -e
 ```
+
 Your text editor will open the default crontab which is a text file with some help text in it. Paste in the following line at the end of the file, then save and close it:
 ```shell
 . . .
