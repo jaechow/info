@@ -1,4 +1,4 @@
-
+<link rel="ICON" sizes="16x16 32x32" type="image/x-icon" href="img/button-bubble-info.png"/>
 <img src="img/button-bubble-info.png"/>
 
 # Info
