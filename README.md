@@ -333,7 +333,8 @@ $ sudo cash -s /bin/bash username
 $ subl ~/.ssh/config
 ```
 
-    + Add following to enable remote Sublime Text editting:
+- Enable remote Sublime Text editting, add
+
     ```shell
     Host domain.com
     RemoteForward 52698 127.0.0.1:52698
