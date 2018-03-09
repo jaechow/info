@@ -335,7 +335,8 @@ $ subl ~/.ssh/config
 
 - Enable remote Sublime Text editting, add
 
-    ```shell
-    Host domain.com
-    RemoteForward 52698 127.0.0.1:52698
-    ```
+ ```shell
+Host domain.com
+RemoteForward 52698 127.0.0.1:52698
+```
+
