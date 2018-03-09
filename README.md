@@ -278,22 +278,22 @@ The `renew` command for Certbot will check all certificates installed on the sys
         - List contents of home directory
 
 + User Modification
-    - Add a `username` and assign secondary group: `tomcat7`
+- Add a `username` and assign secondary group: `tomcat7`
     ```shell
     $ sudo useradd -G tomcat7 -m username
     ```
 
-    - Recursively delete user and /home directory
+- Recursively delete user and /home directory
 ```shell
 $ sudo userdel -r username
 ```
-
-    - Assign primary group named `primarygroup` for user named `username`
+ 
+- Assign primary group named `primarygroup` for user named `username`
 ```shell
 $ sudo usermod -g primarygroup username
 ```
 
-    - Modify the secondary group(s) (comma,delimited,list) of `username`
+- Modify the secondary group(s) (comma,delimited,list) of `username`
 ```shell
 $ sudo usermod -G admin,adm,merchant,issuer,username username
 ```
