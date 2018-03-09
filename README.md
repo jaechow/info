@@ -20,7 +20,11 @@ In This Document
 
 [Linux Stuff](#linux-stuff)
 
+[Command Line Ninja](#command-line-ninja)
+
 [Sublime Text](#sublime-text)
+
+
 
 ## Getting Started
 >"_Make sure that you know how to use the console or command-prompt on your computer_"
@@ -226,7 +230,7 @@ $ openssl version -v
 </FilesMatch>
 ```
 
-- **SSL Certificates** with _Let's Encrypt_
+- **SSL Certificates** with [_Let's Encrypt_](https://letsencrypt.org/)
     + First, add the repository:
     ```shell
     $ sudo add-apt-repository ppa:certbot/certbot
@@ -325,6 +329,12 @@ $ sudo cash -s /bin/bash username
     ```shell
     $ source ~/.bash_aliases
     ```
+
+#### Command Line Ninja
+- Find all files owned by `jacob`, change owner to `jason` and group owner to `groupname` 
+```shell
+$ sudo find .-user jacob -exec chown jason:groupname {} \;
+```
 
 
 ## Sublime Text
