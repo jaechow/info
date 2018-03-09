@@ -288,27 +288,27 @@ The `renew` command for Certbot will check all certificates installed on the sys
 $ sudo userdel -r username
 ```
  
-- Assign primary group named `primarygroup` for user named `username`
+- Assign primary group named `primarygroup` for user named `username` 
 ```shell
 $ sudo usermod -g primarygroup username
 ```
 
-- Modify the secondary group(s) (comma,delimited,list) of `username`
+- Modify the secondary group(s) (comma,delimited,list) of `username` 
 ```shell
 $ sudo usermod -G admin,adm,merchant,issuer,username username
 ```
 
-    - Add a new group named `groupname`
+- Add a new group named `groupname` 
 ```shell
 $ sudo groupadd groupname
 ```
 
-    - Recursively change the owner of file `directoryname` to `groupname`
+- Recursively change the owner of file `directoryname` to `groupname` 
 ```shell
 $ sudo chgrp -R groupname directoryname
 ```
 
-    - Change shell to bash (**bash history**) for `username`
+- Change shell to bash (**bash history**) for `username` 
 ```shell
 $ sudo cash -s /bin/bash username
 ```
