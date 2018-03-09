@@ -8,11 +8,17 @@
 
 In This Document
 [Getting Started](#getting-started)
+
 [macOS Development](#macos-development)
+
 [Android Development](#android-development)
-   [Android Studio](#android-studio)
+
+[Android Studio](#android-studio)
+
 [Webserver Development](#webserver-development)
+
 [Linux Stuff](#linux-stuff)
+
 [Sublime Text](#sublime-text)
 
 ## Getting Started
