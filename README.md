@@ -314,6 +314,7 @@ $ sudo cash -s /bin/bash username
 ```shell
 $ subl ~/.ssh/config
 ```
+
     + Add following to enable remote Sublime Text editting:
     ```shell
     Host domain.com
