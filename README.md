@@ -4,7 +4,7 @@
 # Info
 ## Introduction
 >"_Kids, by the time you're grown there are some things I want you to learn about.  Here is a list._"
--This Guy.
+>-This Guy.
 
 In This Document
 
@@ -28,7 +28,7 @@ In This Document
 
 ## Getting Started
 >"_Make sure that you know how to use the console or command-prompt on your computer_"
--Same Guy
+>-Same Guy
 
 - Mac
     + Terminal
@@ -74,7 +74,7 @@ $ pbcopy < ~/.ssh/id_rsa.pub
 
 ## Android Development
 > "_Be aware the subtle nuances between pure Android development and Samsung Android dev_."
--🧚
+>-🧚
 
 - Reboot Android device to bootloader
 ```shell
