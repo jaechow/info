@@ -167,7 +167,7 @@ $ rmate /etc/php/7.0/apache2/php.ini
 
 - Make `phpMyAdmin` viewable
 ```shell
-sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+$ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 
 ```
 
@@ -222,7 +222,7 @@ $ openssl version -v
 
 - Allow `Access-Control` to share Font cross-site
 - Edit Apache2 Configuration:
-```shell
+```ApacheConf
 <FilesMatch "\.(ttf|otf|eot|woff)$">
   <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
