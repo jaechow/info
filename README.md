@@ -240,9 +240,9 @@ $ openssl version -v
     $ sudo apt-get update && sudo apt-get install python-certbot-apache
     ```
     + Generate SSL Certificate
-```shell
-$ certbot-auto --apache certonly -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub2.domain.com
-```
+    ```shell
+    $ certbot-auto --apache certonly -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub2.domain.com
+    ```
 
 - Remove a _Let's Encrypt_ SSL Certificate
 
