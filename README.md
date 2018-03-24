@@ -245,9 +245,10 @@ $ openssl version -v
     ```
     + Add to existing SSL Certificate
     ```shell
-    $ certbot-auto --apache certonly --expand -d sub3.domain.com -d sub4.domain.com
+    $ certbot-auto --apache certonly --expand -d domain.com -d sub4.domain.com
     ```
-    
+        + It's important to include the original domain.com first in the list
+
 - Remove a _Let's Encrypt_ SSL Certificate
 
 ```shell
