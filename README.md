@@ -41,7 +41,7 @@ In This Document
 
 ## macOS Development
 
-- View all files in `Finder` 
+- View all files in Finder 
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
 - Go To Folder (open system directory in Finder)
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
