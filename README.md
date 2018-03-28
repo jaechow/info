@@ -33,10 +33,10 @@ In This Document
 - Mac
     + Terminal
         * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
-        * <kbd>command</kbd> is also <kbd>⌘</kbd>
-        * <kbd>option</kbd> is also <kbd>⌥</kbd>
-        * <kbd>control</kbd> is also <kbd>⌃</kbd>
-        * <kbd>shift</kbd> is also <kbd>⇧</kbd>
+    * <kbd>command</kbd> is also <kbd>⌘</kbd>
+    * <kbd>option</kbd> is also <kbd>⌥</kbd>
+    * <kbd>control</kbd> is also <kbd>⌃</kbd>
+    * <kbd>shift</kbd> is also <kbd>⇧</kbd>
 - PC
     + Power Shell
         * shortcut: <kbd>Windows</kbd>+<kbd>X</kbd> and type <kbd>A</kbd>
