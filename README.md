@@ -33,6 +33,7 @@ In This Document
 - Mac
     + Terminal
         * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
+        * <kbd>command</kbd> is also <kbd>⌘</kbd>
 - PC
     + Power Shell
         * shortcut: <kbd>Windows</kbd>+<kbd>X</kbd> and type <kbd>A</kbd>
@@ -41,6 +42,8 @@ In This Document
 
 - View all files in `Finder` 
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
+- Go To Folder (open system directory in Finder)
+    + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
 - Print Working Directory
 ```shell
 $ pwd
