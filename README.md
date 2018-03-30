@@ -205,26 +205,52 @@ $ wget http://curl.haxx.se/download/curl-7.50.2.tar.bz2
 $ tar -xvjf curl-7.50.2.tar.bz2
 $ cd curl-7.50.2
 ```
-    ...build from source
+    
+>_In Review_: Symbolic Link `ln -s` [current-target] [new-location]
+
+- Update `SSL` (Avoid **Heart Bleed**)
+    + First, ensure `make` is installed
 ```shell
-$ ./configure
-$ ./make
+$ sudo apt-get install make
+```
+
+- Download openSSL
+
+```shell
+$ wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
+```
+
+- Decompress and enter new directory
+```shell
+$ tar -xzvf openssl-1.1.0h.tar.gz
+$ cd openssl-1.0.2g
+```
+
+- Configure openSSL
+```shell
+$ sudo ./config -Wl,--enable-new-dtags,-rpath,'$(LIBRPATH)'
+```
+
+- Compile openSSL
+```shell
+$ sudo make
+```
+
+- Install openSSL
+```shell
 $ sudo make install
 ```
 
-- Update `SSL` (Avoid **Heart Bleed**)
+- Restart
 ```shell
-$ sudo apt-get install make (Install compiling library Make)
-$ wget https://www.openssl.org/source/openssl-1.0.2g.tar.gz
-$ tar -xzvf openssl-1.0.2g.tar.gz
-$ cd openssl-1.0.2g
-$ sudo ./config
-$ sudo make install
-$ sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
+$ sudo reboot
+```
+
+- Verify openSSL version
+```shell
 $ openssl version -v
 ```
 
->_In Review_: Symbolic Link `ln -s` [current-target] [new-location]
 
 - Allow `Access-Control` to share Font cross-site
 - Edit Apache2 Configuration:
