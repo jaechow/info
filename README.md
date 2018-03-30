@@ -215,7 +215,6 @@ $ sudo apt-get install make
 ```
 
 - Download openSSL
-
 ```shell
 $ wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
 ```
