@@ -1,6 +1,6 @@
 <link rel="ICON" sizes="16x16 32x32" type="image/x-icon" href="img/button-bubble-info.png"/>
 <img src="img/button-bubble-info.png"/>
-
+<meta property="og:image" content="https://octodex.github.com/images/topguntocat.png" />
 # Info
 ## Introduction
 >"_Kids, by the time you're grown there are some things I want you to learn about.  Here is a list._"
