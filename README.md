@@ -78,6 +78,17 @@ Password:🗝
 $ pbcopy < ~/.ssh/id_rsa.pub
 ```
 
+- Delete Time Machine Snapshots
+```shell
+$ tmutil listlocalsnapshots /
+```
+    The terminal will display Snapshots like:
+    `com.apple.TimeMachine.2018-03-01-00201`
+    Then:
+```shell
+$ tmutil deletelocalsnapshots 2018-03-01-002010
+```
+
 ## Android Development
 > "_Be aware the subtle nuances between pure Android development and Samsung Android dev_."
 >-🧚
