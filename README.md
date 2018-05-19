@@ -78,13 +78,15 @@ Password:🗝
 $ pbcopy < ~/.ssh/id_rsa.pub
 ```
 
-- Delete Time Machine Snapshots
+- Display Time Machine Snapshots
 ```shell
 $ tmutil listlocalsnapshots /
 ```
-    The terminal will display Snapshots like:
+
+The terminal will display Snapshots like:
     `com.apple.TimeMachine.2018-03-01-00201`
-    Then:
+
+- Delete Time Machine Snapshots
 ```shell
 $ tmutil deletelocalsnapshots 2018-03-01-002010
 ```
