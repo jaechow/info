@@ -142,7 +142,6 @@ $ sudo apt-get install php5 apache2 libapache2-mod-php5 php5-curl libapache2-mod
 ```
 
 - Setup MySQL
-- 
 ```shell
 $ mysql_secure_installation
 $ mysql -u root -p
