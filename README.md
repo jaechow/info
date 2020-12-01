@@ -286,12 +286,12 @@ $ openssl version -v
     + Generate SSL Certificate
         * `certonly` assumes you will manually configure SSL Certificate config
     ```shell
-    $ certbot-auto --apache certonly -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com
+    $ certbot --apache certonly -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com
     ```
     + Add to existing SSL Certificate
         * Ensure the original 'domain.com' is first in the list:
     ```shell
-    $ certbot-auto --apache certonly --expand -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com -d sub4.domain.com
+    $ certbot --apache certonly --expand -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com -d sub4.domain.com
     ```
 
 - Remove a _Let's Encrypt_ SSL Certificate
