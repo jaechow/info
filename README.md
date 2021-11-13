@@ -364,8 +364,9 @@ $ sudo chgrp -R groupname directoryname
 
 - Change shell to bash (**bash history**) for `username` 
 ```shell
-$ sudo cash -s /bin/bash username
+$ sudo chsh -s /bin/bash username
 ```
+
 - BASH Aliases
     + Create/Edit `~/.bash_aliases`
     + Add:
