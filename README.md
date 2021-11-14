@@ -48,12 +48,12 @@ In This Document
 
 - Output log of all macOS downloaded content
 ```shell
-$ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'
 ```
 
 - Remove log of all macOS downloaded content
 ```shell
-$ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
 ```
 
 - Install [Homebrew](https://brew.sh), the macOS package manager
@@ -63,18 +63,18 @@ $ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'del
 
 - Elevate to root
 ```shell
-$ sudo su
+sudo su
 Password:🗝
 ```
 
 - Copy contents of i`d_rsa.pub` file to your clipboard
 ```shell
-$ pbcopy < ~/.ssh/id_rsa.pub
+pbcopy < ~/.ssh/id_rsa.pub
 ```
 
 - Display Time Machine Snapshots
 ```shell
-$ tmutil listlocalsnapshots /
+tmutil listlocalsnapshots /
 ```
 
 The terminal will display Snapshots like:
@@ -82,7 +82,7 @@ The terminal will display Snapshots like:
 
 - Delete Time Machine Snapshots
 ```shell
-$ tmutil deletelocalsnapshots 2018-03-01-002010
+tmutil deletelocalsnapshots 2018-03-01-002010
 ```
 
 ## Android Development
@@ -91,37 +91,37 @@ $ tmutil deletelocalsnapshots 2018-03-01-002010
 
 - Reboot Android device to bootloader
 ```shell
-$ adb reboot bootloader
+adb reboot bootloader
 ```
 
 - Reboot Android device to fastboot (*non-Samsung*)
 ```shell
-$ adb reboot fastboot
+adb reboot fastboot
 ```
 
 - Wipe Android device's User data (_Cracked screen, need to wipe?_)
 ```shell
-$ adb fastboot -w
+adb fastboot -w
 ```
 
 - OEM Unlock Android device bootloader
 ```shell
-$ fastboot oem unlock
+fastboot oem unlock
 ```
 
 - Flash the bootloader partition with the file dragged into the console window
 ```shell
-$ fastboot flash bootloder 
+fastboot flash bootloder 
 ```
 
 - Erase Dalvik cache
 ```shell
-$ fastboot erase cache
+fastboot erase cache
 ```
 
 - Reboot Android device (from Fastboot)
 ```shell
-$ fastboot reboot
+fastboot reboot
 ```
 
 ### Android Studio
@@ -131,85 +131,85 @@ Tools → Android → AVD Manager →✏️→ Show Advanced Settings (scroll to
 
 ## Webserver Development
 - Install packages necessary to host webpages
+
 ```shell
-$ sudo apt-get install php5 apache2 libapache2-mod-php5 php5-curl libapache2-mod-auth-mysql mysql-server php5-mysql phpmyadmin
+sudo apt update && sudo apt install php apache2 libapache2-mod-php php-curl libapache2-mod-auth-mysql mysql-server php-mysql phpmyadmin
 ```
 
 - Setup MySQL
 ```shell
-$ mysql_secure_installation
-$ mysql -u root -p
+mysql_secure_installation
+mysql -u root -p
 ```
 
 - Enable Apache2 rewrite module
 ```shell
-$ a2enmod rewrite
+a2enmod rewrite
 ```
 
 - Enable headers rewrite module
 ```shell
-$ a2enmod headers
+a2enmod headers
 ```
 
 - Enable mcrypt
 ```shell
-$ sudo php5enmod mcrypt
+sudo php5enmod mcrypt
 ```
 
 - Restart Apache
 ```shell
-$ sudo service apache2 restart
+sudo service apache2 restart
 ```
 
 - Install Remote Sublime Text Binary
 ```shell
-$ sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate
-$ sudo chmod a+x /usr/local/bin/rmate
+sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate && sudo chmod a+x /usr/local/bin/rmate
 ```
 
 - Edit `mysql` config
 ```shell
-$ rmate /etc/mysql/my.cnf
+rmate /etc/mysql/my.cnf
 ```
 
 - Enable `mysqli`
 ```shell
-$ rmate /etc/php/7.0/apache2/php.ini
+rmate /etc/php/7.0/apache2/php.ini
 ```
 
 - Make `phpMyAdmin` viewable
 ```shell
-$ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 
 ```
 
 - **Edit Apache Configuration**
 ```shell
-$ rmate /etc/apache2/apache2.conf
+rmate /etc/apache2/apache2.conf
 ```
 
 - **View Apache Error Log**
 ```shell
-$ rmate /var/log/apache2/error.log
+rmate /var/log/apache2/error.log
 ```
 
 - Update `cURL`
 ```shell
-$ ! /usr/bin/env bash
+! /usr/bin/env bash
 ```
 
 - Install any build-dependencies necessary for `cURL`
 ```shell
-$ sudo apt-get build-dep curl
+sudo apt-get build-dep curl
 ```
 
 - Get latest `libcurl` (as of: **Feb 25, 2016**)
 ```shell
-$ mkdir ~/curl
-$ cd ~/curl
-$ wget http://curl.haxx.se/download/curl-7.50.2.tar.bz2
-$ tar -xvjf curl-7.50.2.tar.bz2
-$ cd curl-7.50.2
+mkdir ~/curl
+cd ~/curl
+wget http://curl.haxx.se/download/curl-7.50.2.tar.bz2
+tar -xvjf curl-7.50.2.tar.bz2
+cd curl-7.50.2
 ```
     
 >_In Review_: Symbolic Link `ln -s` [current-target] [new-location]
@@ -217,43 +217,43 @@ $ cd curl-7.50.2
 - Update `SSL` (Avoid **Heart Bleed**)
     + First, ensure `make` is installed
 ```shell
-$ sudo apt-get install make
+sudo apt-get install make
 ```
 
 - Download openSSL
 ```shell
-$ wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
+wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
 ```
 
 - Decompress and enter new directory
 ```shell
-$ tar -xzvf openssl-1.1.0h.tar.gz
-$ cd openssl-1.0.2g
+tar -xzvf openssl-1.1.0h.tar.gz
+cd openssl-1.0.2g
 ```
 
 - Configure openSSL
 ```shell
-$ sudo ./config -Wl,--enable-new-dtags,-rpath,'$(LIBRPATH)'
+sudo ./config -Wl,--enable-new-dtags,-rpath,'$(LIBRPATH)'
 ```
 
 - Compile openSSL
 ```shell
-$ sudo make
+sudo make
 ```
 
 - Install openSSL
 ```shell
-$ sudo make install
+sudo make install
 ```
 
 - Restart
 ```shell
-$ sudo reboot
+sudo reboot
 ```
 
 - Verify openSSL version
 ```shell
-$ openssl version -v
+openssl version -v
 ```
 
 
@@ -270,41 +270,41 @@ $ openssl version -v
 - **SSL Certificates** with [_Let's Encrypt_](https://letsencrypt.org/)
     + First, add the repository:
     ```shell
-    $ sudo add-apt-repository ppa:certbot/certbot
+    sudo add-apt-repository ppa:certbot/certbot
     ```
     + press <kbd>enter</kbd> to accept.  Next, update the package and install
     ```shell
-    $ sudo apt-get update && sudo apt-get install python-certbot-apache
+    sudo apt update && sudo apt install python-certbot-apache
     ```
     + Ensure `apache2.conf` contains port 80 entry for domain(s) being added
     + Generate SSL Certificate
         * `certonly` assumes you will manually configure SSL Certificate config
     ```shell
-    $ certbot --apache certonly -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com
+    certbot --apache certonly -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com
     ```
     + Add to existing SSL Certificate
         * Ensure the original 'domain.com' is first in the list:
     ```shell
-    $ certbot --apache certonly --expand -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com -d sub4.domain.com
+    certbot --apache certonly --expand -d domain.com -d www.domain.com -d sub1.domain.com -d sub2.domain.com -d sub3.domain.com -d sub4.domain.com
     ```
 
 - Remove a _Let's Encrypt_ SSL Certificate
 
 ```shell
-$ rm -rf /etc/letsencrypt/archive/domain.com/
-$ rm -rf /etc/letsencrypt/live/domain.com/
-$ rm -rf /etc/letsencrypt/renewal/domain.com.conf
+rm -rf /etc/letsencrypt/archive/domain.com/
+rm -rf /etc/letsencrypt/live/domain.com/
+rm -rf /etc/letsencrypt/renewal/domain.com.conf
 ```
 
 - Edit SSL Certificate configuration
 ```shell
-$ rmate /etc/apache2/sites-available/000-default-le-ssl.conf
+rmate /etc/apache2/sites-available/000-default-le-ssl.conf
 ```
 
 - Set up Auto-Renewal
 To run the renewal check daily, we will use `cron`, a standard system service for running periodic jobs. We tell `cron` what to do by opening and editing a file called a `crontab`
 ```shell
-$ sudo crontab -e
+sudo crontab -e
 ```
 
 Your text editor will open the default crontab which is a text file with some help text in it. Paste in the following line at the end of the file, then save and close it:
@@ -322,7 +322,7 @@ The `renew` command for Certbot will check all certificates installed on the sys
 
 - Print Working Directory
 ```shell
-$ pwd
+pwd
 ```
 
 + Shortcuts
@@ -334,37 +334,37 @@ $ pwd
 + User Modification
 - Add a `username` and assign secondary group: `tomcat7`
 ```shell
-$ sudo useradd -G tomcat7 -m username
+sudo useradd -G tomcat7 -m username
 ```
 
 - Recursively delete user and /home directory
 ```shell
-$ sudo userdel -r username
+sudo userdel -r username
 ```
  
 - Assign primary group named `primarygroup` for user named `username` 
 ```shell
-$ sudo usermod -g primarygroup username
+sudo usermod -g primarygroup username
 ```
 
 - Modify the secondary group(s) (comma,delimited,list) of `username` 
 ```shell
-$ sudo usermod -G admin,adm,merchant,issuer,username username
+sudo usermod -G admin,adm,merchant,issuer,username username
 ```
 
 - Add a new group named `groupname` 
 ```shell
-$ sudo groupadd groupname
+sudo groupadd groupname
 ```
 
 - Recursively change the owner of file `directoryname` to `groupname` 
 ```shell
-$ sudo chgrp -R groupname directoryname
+sudo chgrp -R groupname directoryname
 ```
 
 - Change shell to bash (**bash history**) for `username` 
 ```shell
-$ sudo chsh -s /bin/bash username
+sudo chsh -s /bin/bash username
 ```
 
 - BASH Aliases
@@ -374,23 +374,23 @@ $ sudo chsh -s /bin/bash username
         * _no whitespace around '='_
     + Set permissions
     ```shell
-    $ chmod a+x ~/.bash_aliases
+    chmod a+x ~/.bash_aliases
     ```
     + Source `~/.bash_aliases` (Restart)
     ```shell
-    $ source ~/.bash_aliases
+    source ~/.bash_aliases
     ```
 
 - Find all files owned by `jacob`, change owner to `jason` and group owner to `groupname` 
 ```shell
-$ sudo find .-user jacob -exec chown jason:groupname {} \;
+sudo find .-user jacob -exec chown jason:groupname {} \;
 ```
 
 
 ## Sublime Text
 - Open `.ssh/config` in Sublime Text locally
 ```shell
-$ subl ~/.ssh/config
+subl ~/.ssh/config
 ```
 
 - Enable remote Sublime Text editting, add
