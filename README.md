@@ -20,8 +20,6 @@ In This Document
 
 [Linux Stuff](#linux-stuff)
 
-[Command Line Ninja](#command-line-ninja)
-
 [Sublime Text](#sublime-text)
 
 
@@ -47,10 +45,6 @@ In This Document
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
 - Go To Folder (open system directory in Finder)
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
-- Print Working Directory
-```shell
-$ pwd
-```
 
 - Output log of all macOS downloaded content
 ```shell
@@ -69,7 +63,7 @@ $ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'del
 
 - Elevate to root
 ```shell
-$ sudo bash
+$ sudo su
 Password:🗝
 ```
 
@@ -325,6 +319,12 @@ The `renew` command for Certbot will check all certificates installed on the sys
 `cron` will now run this command daily. Because we installed our certificates using the `--apache` plugin, Apache will also be reloaded to ensure the new certificates are used.
 
 ## Linux Stuff
+
+- Print Working Directory
+```shell
+$ pwd
+```
+
 + Shortcuts
     * `id username` 
         - List primary and secondary groups for `username` 
@@ -381,7 +381,6 @@ $ sudo chsh -s /bin/bash username
     $ source ~/.bash_aliases
     ```
 
-#### Command Line Ninja
 - Find all files owned by `jacob`, change owner to `jason` and group owner to `groupname` 
 ```shell
 $ sudo find .-user jacob -exec chown jason:groupname {} \;
