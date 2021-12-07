@@ -46,7 +46,7 @@ In This Document
 
 ## macOS Development
 
-- View all files in Finder 
+- View all files in Finder
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
 - Go To Folder (open system directory in Finder)
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
@@ -71,8 +71,8 @@ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delet
 
 - Elevate to root
 
-```shell
-sudo su
+```console
+foo@bar:~$ sudo su
 Password:🗝
 ```
 
@@ -356,13 +356,13 @@ rmate /etc/apache2/sites-available/000-default-le-ssl.conf
 - Set up Auto-Renewal
 To run the renewal check daily, we will use `cron`, a standard system service for running periodic jobs. We tell `cron` what to do by opening and editing a file called a `crontab`
 
-```shell
+```bash
 sudo crontab -e
 ```
 
 Your text editor will open the default crontab which is a text file with some help text in it. Paste in the following line at the end of the file, then save and close it:
 
-```shell
+```bash
 . . .
 15 3 * * * /usr/bin/certbot renew --quiet
 ```
@@ -377,7 +377,7 @@ The `renew` command for Certbot will check all certificates installed on the sys
 
 - Print Working Directory
 
-```shell
+```bash
 pwd
 ```
 
@@ -387,47 +387,53 @@ pwd
     * `ls ~`
         - List contents of home directory
 
-+ User Modification
++ User Administration
 
 - Add a `username` and assign secondary group: `tomcat7`
 
-```shell
+```bash
 sudo useradd -G tomcat7 -m username
 ```
 
 - Recursively delete user and /home directory
 
-```shell
+```bash
 sudo userdel -r username
 ```
 
 - Assign primary group named `primarygroup` for user named `username`
 
-```shell
+```bash
 sudo usermod -g primarygroup username
 ```
 
 - Modify the secondary group(s) (comma,delimited,list) of `username`
 
-```shell
+```bash
 sudo usermod -G admin,adm,merchant,issuer,username username
 ```
 
 - Add a new group named `groupname`
 
-```shell
+```bash
 sudo groupadd groupname
+```
+
+- To remove a user from a group, use the gpasswd command with the -d (short for delete) option as follows
+
+```bash
+gpasswd -d userName groupExiting
 ```
 
 - Recursively change the owner of file `directoryname` to `groupname`
 
-```shell
+```bash
 sudo chgrp -R groupname directoryname
 ```
 
 - Change shell to bash (**bash history**) for `username`
 
-```shell
+```bash
 sudo chsh -s /bin/bash username
 ```
 
@@ -438,19 +444,20 @@ sudo chsh -s /bin/bash username
         * _no whitespace around '='_
     + Set permissions
 
-    ```shell
+    ```bash
     chmod a+x ~/.bash_aliases
     ```
 
-    + Source `~/.bash_aliases` (Reload)
+    - To read and execute the contents of a file/script use the `Source` command
+    (the following example loads the bash aliases file)
 
-    ```shell
+    ```bash
     source ~/.bash_aliases
     ```
 
 - Find all files owned by `jacob`, change owner to `jason` and group owner to `groupname`
 
-```shell
+```bash
 sudo find .-user jacob -exec chown jason:groupname {} \;
 ```
 
@@ -458,7 +465,7 @@ sudo find .-user jacob -exec chown jason:groupname {} \;
 
 - Open `.ssh/config` in Sublime Text locally
 
-```shell
+```bash
 subl ~/.ssh/config
 ```
 
