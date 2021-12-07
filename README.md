@@ -1,6 +1,10 @@
 <link rel="ICON" sizes="16x16 32x32" type="image/x-icon" href="img/button-bubble-info.png"/>
 <img src="img/button-bubble-info.png"/>
 
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=jaechow&show_icons=true)
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=jaechow/info)
+
 # Info
 
 ## Introduction
@@ -464,4 +468,3 @@ subl ~/.ssh/config
 Host domain.com
 RemoteForward 52698 127.0.0.1:52698
 ```
-
