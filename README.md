@@ -28,6 +28,8 @@ In This Document
 
 [Sublime Text](#sublime-text)
 
+[GitHub Emotes](#GitHub-emotes)
+
 ## Getting Started
 
 >"_Make sure that you know how to use the console or command-prompt on your computer_"
