@@ -78,7 +78,7 @@ foo@bar:~$ sudo su
 Password:🗝
 ```
 
-- Copy contents of i`d_rsa.pub` file to your clipboard
+- Copy contents of `id_rsa.pub` file to your clipboard
 
 ```shell
 pbcopy < ~/.ssh/id_rsa.pub
