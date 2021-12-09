@@ -442,18 +442,19 @@ sudo chsh -s /bin/bash username
     + Add:
         * `alias rsub='rmate $1'`
         * _no whitespace around '='_
-    + Set permissions
+        
+- Modify file permissions with `chmod a+x`
 
-    ```bash
-    chmod a+x ~/.bash_aliases
-    ```
+```bash
+chmod a+x ~/.bash_aliases
+```
 
-    - To read and execute the contents of a file/script use the `Source` command
-    (the following example loads the bash aliases file)
+- To read and execute the contents of a file/script use the `Source` command
+(the following example loads the bash aliases file)
 
-    ```bash
-    source ~/.bash_aliases
-    ```
+```bash
+source ~/.bash_aliases
+```
 
 - Find all files owned by `jacob`, change owner to `jason` and group owner to `groupname`
 
@@ -475,3 +476,25 @@ subl ~/.ssh/config
 Host domain.com
 RemoteForward 52698 127.0.0.1:52698
 ```
+
+## GitHub Custom Emotes
+
+Use these emotes anywhere on GitHub (only)
+
+| emote | shortcode |
+|:--|:--|
+|:bowtie:|`:bowtie:`|
+|:neckbeard:|`:neckbeard:`|
+|:octocat:|`:octocat:`|
+|:shipit:|`:shipit:`|
+|:trollface:|`:trollface:`|
+|:suspect:|`:suspect:`|
+|:hurtrealbad:|`:hurtrealbad:`|
+|:feelsgood:|`:feelsgood:`|
+|:goberserk:|`:goberserk:`|
+|:finnadie:|`:finnadie:`|
+|:rage1:|`:rage1:`|
+|:rage1:|`:rage1:`|
+|:rage3:|`:rage3:`|
+|:rage4:|`:rage4:`|
+|:godmode:|`:godmode:`|
