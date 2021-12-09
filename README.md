@@ -28,7 +28,7 @@ In This Document
 
 [Sublime Text](#sublime-text)
 
-[GitHub Emotes](#GitHub-emotes)
+[GitHub Emotes](#github-custom-emotes)
 
 ## Getting Started
 
