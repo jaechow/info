@@ -1,54 +1,28 @@
 <link rel="ICON" sizes="16x16 32x32" type="image/x-icon" href="img/button-bubble-info.png"/>
 <img src="img/button-bubble-info.png"/>
 
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=jaechow&show_icons=true)
-
-![GitHub Contributors Image](https://contrib.rocks/image?repo=jaechow/info)
-
 # Info
 
 ## Introduction
 
->"_Kids, by the time you're grown there are some things I want you to learn about.  Here is a list._"
->-This Guy.
-
-In This Document
-
-[Getting Started](#getting-started)
-
-[macOS Development](#macos-development)
-
-[Android Development](#android-development)
-
-[Android Studio](#android-studio)
-
-[Webserver Development](#webserver-development)
-
-[Linux Stuff](#linux-stuff)
-
-[Sublime Text](#sublime-text)
-
-[GitHub Emotes](#github-custom-emotes)
+>The living, breathing cheat-sheet!
 
 ## Getting Started
 
->"_Make sure that you know how to use the console or command-prompt on your computer_"
->-Same Guy
-
-- Mac
-    + Terminal
+- macOS
+    + Open the Terminal Emulator
         * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
     * <kbd>command</kbd> is also <kbd>⌘</kbd>
     * <kbd>option</kbd> is also <kbd>⌥</kbd>
     * <kbd>control</kbd> is also <kbd>⌃</kbd>
     * <kbd>shift</kbd> is also <kbd>⇧</kbd>
-- PC
-    + Power Shell
+- Windows
+    + Open the Power Shell prompt
         * shortcut: <kbd>Windows</kbd>+<kbd>X</kbd> and type <kbd>A</kbd>
 
 ## macOS Development
 
-- View all files in Finder
+- View all (hidden) files in Finder
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
 - Go To Folder (open system directory in Finder)
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
@@ -100,9 +74,6 @@ tmutil deletelocalsnapshots 2018-03-01-002010
 ```
 
 ## Android Development
-
-> "_Be aware the subtle nuances between pure Android development and Samsung Android dev_."
->-🧚
 
 - Reboot Android device to bootloader
 
@@ -499,4 +470,11 @@ Use these emotes anywhere on GitHub (only)
 |:rage1:|`:rage1:`|
 |:rage3:|`:rage3:`|
 |:rage4:|`:rage4:`|
-|:godmode:|`:godmode:`|
+|:godmode:|`:godmode:`
+
+## Contributors
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=jaechow/info)
+
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=jaechow&show_icons=true)
+
