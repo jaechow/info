@@ -1,6 +1,25 @@
 <link rel="ICON" sizes="16x16 32x32" type="image/x-icon" href="img/button-bubble-info.png"/>
-<img src="img/button-bubble-info.png"/>
+<p align="center"><img src="img/button-bubble-info.png"/></p>
 
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+[![GitHub Issues](https://img.shields.io/github/issues/jaechow/info.svg)](https://github.com/jaechow/info/issues)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/jaechow/info#readme)
+<a href="https://twitter.com/intent/tweet?text=Check out this awesome README&url=https%3A%2F%2Fgithub.com%2Fjaechow%2Finfo">
+<img src="https://img.shields.io/twitter/url/https/github.com/jaechow/info.svg?style=flat-square&logo=twitter" alt="GitHub tweet">
+</a>
+
+
+<p align="center">
+    <a href="#getting-started">Getting Started</a> •
+    <a href="#macos-development">macOS Development</a> •
+    <a href="#android-development">Android Development</a> •
+    <a href="#android-studio">Android Studio</a> •
+    <a href="#webserver-development">Webserver Development</a> •
+    <a href="#linux-stuff">Linux Stuff</a> •
+    <a href="#sublime-text">Sublime Text</a> •
+    <a href="#github-emotes">GitHub Emotes</a>
+</p>
 # Info
 
 ## Introduction
