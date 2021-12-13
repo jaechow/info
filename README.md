@@ -18,7 +18,7 @@
     <a href="#webserver-development">Webserver Development</a> •
     <a href="#linux-stuff">Linux Stuff</a> •
     <a href="#sublime-text">Sublime Text</a> •
-    <a href="#github-emotes">GitHub Emotes</a>
+    <a href="#github-custom-emotes">GitHub Emotes</a>
 </p>
 # Info
 
