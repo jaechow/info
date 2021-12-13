@@ -9,7 +9,6 @@
 <img src="https://img.shields.io/twitter/url/https/github.com/jaechow/info.svg?style=flat-square&logo=twitter" alt="GitHub tweet">
 </a>
 
-
 <p align="center">
     <a href="#getting-started">Getting Started</a> •
     <a href="#macos-development">macOS Development</a> •
@@ -20,6 +19,7 @@
     <a href="#sublime-text">Sublime Text</a> •
     <a href="#github-custom-emotes">GitHub Emotes</a>
 </p>
+
 # Info
 
 ## Introduction
