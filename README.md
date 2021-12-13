@@ -1,7 +1,7 @@
 <link rel="ICON" sizes="16x16 32x32" type="image/x-icon" href="img/button-bubble-info.png"/>
 <p align="center"><img src="img/button-bubble-info.png"/></p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://jaechow.github.io/info/)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/jaechow/info.svg)](https://github.com/jaechow/info/issues)
