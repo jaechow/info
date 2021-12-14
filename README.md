@@ -12,7 +12,7 @@
 </a>
 
 <p align="center">
-    <a href="#getting-started">Getting Started</a> •
+    <a href="#windows-development">Windows Development</a> •
     <a href="#macos-development">macOS Development</a> •
     <a href="#android-development">Android Development</a> •
     <a href="#android-studio">Android Studio</a> •
@@ -28,20 +28,36 @@
 
 >The living, breathing cheat-sheet!
 
-## Getting Started
+## Windows Development
 
-- macOS
-    + Open the Terminal Emulator
-        * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
-    * <kbd>command</kbd> is also <kbd>⌘</kbd>
-    * <kbd>option</kbd> is also <kbd>⌥</kbd>
-    * <kbd>control</kbd> is also <kbd>⌃</kbd>
-    * <kbd>shift</kbd> is also <kbd>⇧</kbd>
-- Windows
-    + Open the Power Shell prompt
-        * shortcut: <kbd>Windows</kbd>+<kbd>X</kbd> and type <kbd>A</kbd>
+- Open the Power Shell prompt
+    - shortcut: <kbd>Windows</kbd>+<kbd>X</kbd> and type <kbd>A</kbd>
+
+- Install Chocolatey the Package Manager
+>Run `Get-ExecutionPolicy`. If it returns `Restricted`, then run 
+>`Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`.
+
+```console
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+- Enable GPG signing with native Windows Git
+
+```console
+foo@bar:~$ where gpg
+C:\Program Files (x86)\GnuPG\bin\gpg.exe
+
+foo@bar:~$ git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
+```
 
 ## macOS Development
+
+- Open the Terminal Emulator
+    - * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
+    - <kbd>command</kbd> is also <kbd>⌘</kbd>
+    - <kbd>option</kbd> is also <kbd>⌥</kbd>
+    - <kbd>control</kbd> is also <kbd>⌃</kbd>
+    - <kbd>shift</kbd> is also <kbd>⇧</kbd>
 
 - View all (hidden) files in Finder
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
