@@ -487,6 +487,16 @@ Host domain.com
 RemoteForward 52698 127.0.0.1:52698
 ```
 
+- Find all cron jobs listed by user
+- exclude comments
+- Suppress 'no crontab for user...' messages:
+
+>Must be run as root
+
+```bash
+for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l 2>/dev/null | grep -v '^#'; done
+```
+
 ## GitHub Custom Emotes
 
 Use these emotes anywhere on GitHub (only)
