@@ -53,8 +53,9 @@ foo@bar:~$ git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg
 ## macOS Development
 
 #### Open the Terminal Emulator
+shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
 
-- shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
+#### Keyboard Symbols
 - <kbd>command</kbd> is also <kbd>⌘</kbd>
 - <kbd>option</kbd> is also <kbd>⌥</kbd>
 - <kbd>control</kbd> is also <kbd>⌃</kbd>
