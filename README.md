@@ -53,11 +53,12 @@ foo@bar:~$ git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg
 ## macOS Development
 
 #### Open the Terminal Emulator
-    - * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
-    - <kbd>command</kbd> is also <kbd>⌘</kbd>
-    - <kbd>option</kbd> is also <kbd>⌥</kbd>
-    - <kbd>control</kbd> is also <kbd>⌃</kbd>
-    - <kbd>shift</kbd> is also <kbd>⇧</kbd>
+
+- shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
+- <kbd>command</kbd> is also <kbd>⌘</kbd>
+- <kbd>option</kbd> is also <kbd>⌥</kbd>
+- <kbd>control</kbd> is also <kbd>⌃</kbd>
+- <kbd>shift</kbd> is also <kbd>⇧</kbd>
 
 #### View all (hidden) files in Finder
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
@@ -120,7 +121,7 @@ To reenable sorting, use this command:
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool FALSE
 ```
 
-#### Deleting All Instances of a File in a Directory and Its Subdirectories on Mac
+#### Deleting All Instances of a File in a Directory and Its Subdirectories
 For example, to find and delete all the `.DS_Store` files in the current folder and all subfolders:
 ```shell
 find . -name ".DS_Store" -delete
