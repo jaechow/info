@@ -62,9 +62,10 @@ shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
 - <kbd>shift</kbd> is also <kbd>⇧</kbd>
 
 #### View all (hidden) files in Finder
-    + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
+<kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
+
 #### Go To Folder (open system directory in Finder)
-    + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
+<kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
 
 #### Output log of all macOS downloaded content
 
@@ -86,12 +87,12 @@ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delet
 
 #### Elevate to root
 
-```console
+```shell
 foo@bar:~$ sudo su
 Password:🗝
 ```
 
-#### Copy contents of `id_rsa.pub` file to your clipboard
+#### Copy SSH key to your clipboard
 
 ```shell
 pbcopy < ~/.ssh/id_rsa.pub
@@ -104,7 +105,9 @@ tmutil listlocalsnapshots /
 ```
 
 The terminal will display Snapshots like:
-    `com.apple.TimeMachine.2018-03-01-00201`
+```shell
+com.apple.TimeMachine.2018-03-01-00201
+```
 
 #### Delete Time Machine Snapshots
 
