@@ -52,50 +52,50 @@ foo@bar:~$ git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg
 
 ## macOS Development
 
-- Open the Terminal Emulator
+#### Open the Terminal Emulator
     - * shortcut: <kbd>command</kbd>+<kbd>space</kbd> and type `terminal`
     - <kbd>command</kbd> is also <kbd>⌘</kbd>
     - <kbd>option</kbd> is also <kbd>⌥</kbd>
     - <kbd>control</kbd> is also <kbd>⌃</kbd>
     - <kbd>shift</kbd> is also <kbd>⇧</kbd>
 
-- View all (hidden) files in Finder
+#### View all (hidden) files in Finder
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>.</kbd>
-- Go To Folder (open system directory in Finder)
+#### Go To Folder (open system directory in Finder)
     + <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>G</kbd>
 
-- Output log of all macOS downloaded content
+#### Output log of all macOS downloaded content
 
 ```shell
 sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'
 ```
 
-- Remove log of all macOS downloaded content
+#### Remove log of all macOS downloaded content
 
 ```shell
 sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
 ```
 
-- Install [Homebrew](https://brew.sh), the macOS package manager
+#### Install [Homebrew](https://brew.sh), the macOS package manager
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- Elevate to root
+#### Elevate to root
 
 ```console
 foo@bar:~$ sudo su
 Password:🗝
 ```
 
-- Copy contents of `id_rsa.pub` file to your clipboard
+#### Copy contents of `id_rsa.pub` file to your clipboard
 
 ```shell
 pbcopy < ~/.ssh/id_rsa.pub
 ```
 
-- Display Time Machine Snapshots
+#### Display Time Machine Snapshots
 
 ```shell
 tmutil listlocalsnapshots /
@@ -104,10 +104,34 @@ tmutil listlocalsnapshots /
 The terminal will display Snapshots like:
     `com.apple.TimeMachine.2018-03-01-00201`
 
-- Delete Time Machine Snapshots
+#### Delete Time Machine Snapshots
 
 ```shell
 tmutil deletelocalsnapshots 2018-03-01-002010
+```
+
+#### Speed up browsing on network shares
+To make SMB file browsing faster on a Mac, you can stop it from reading hidden `.DS_Store` files. This makes folders load quicker by showing files in simple A-Z order. Use this Terminal command:
+```shell
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+```
+To reenable sorting, use this command:
+```shell
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool FALSE
+```
+
+#### Deleting All Instances of a File in a Directory and Its Subdirectories on Mac
+For example, to find and delete all the `.DS_Store` files in the current folder and all subfolders:
+```shell
+find . -name ".DS_Store" -delete
+```
+To also print their relative paths:
+```shell
+find . -name ".DS_Store" -print -delete
+```
+To ensure only files are deleted, you can exclude directories by filtering specifically for files:
+```shell
+find . -name ".DS_Store" -type f -delete
 ```
 
 ## Android Development
